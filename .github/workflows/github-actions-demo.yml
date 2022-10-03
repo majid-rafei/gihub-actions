@@ -12,4 +12,5 @@ jobs:
           cd server
       - name: run test
         run: |
+          dir
           $env:CC_RUN_SERVER="false"; npm test
