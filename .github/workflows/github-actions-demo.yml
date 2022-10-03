@@ -7,10 +7,8 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - name: go to server
+      - name: go to server and run test
         run: |
-          cd server
-      - name: run test
-        run: |
+          cd ./server
           dir
           $env:CC_RUN_SERVER="false"; npm test
