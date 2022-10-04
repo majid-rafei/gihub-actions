@@ -19,11 +19,14 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - name: go to web-app and run web-app
+      - name: go to web-app
         run: |
           pushd ./web-app
-          npm start
-          npm test
-      - name: end test
+      - name: run web-app and cypress test
+        uses: cypress-io/github-action@v4.x.x # use the explicit version number
+        with:
+          build: npm run build
+          start: npm start
+      - name: back to main dir
         run: |
           popd
