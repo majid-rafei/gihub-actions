@@ -23,7 +23,7 @@ jobs:
         run: |
           pushd ./web-app
       - name: run web-app and cypress test
-        uses: cypress-io/github-action@v4.x.x # use the explicit version number
+        uses: cypress-io/github-action@v4.2.0 # use the explicit version number
         with:
           build: npm run build
           start: npm start
