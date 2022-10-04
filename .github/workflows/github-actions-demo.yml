@@ -22,7 +22,7 @@ jobs:
       - name: go to web-app and run web-app
         run: |
           pushd ./web-app
-          npm start &
+          npm start &&
           npm test
       - name: end test
         run: |
