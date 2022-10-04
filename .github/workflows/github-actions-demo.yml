@@ -19,9 +19,11 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - name: go to server and run test
+      - name: go to web-app and run web-app
         run: |
           pushd ./web-app
-          dir
-          npx cypress run
+          npm start
+      - name: run test
+        run: |
+          npm test
           popd
